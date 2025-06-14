@@ -97,6 +97,6 @@ This project enables telecom companies to:
 
 ## 🔗 Dataset
 
-- [Telco Customer Churn – Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn)
+- [Telco Customer Churn – Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
 
