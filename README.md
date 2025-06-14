@@ -103,3 +103,10 @@ This project enables telecom companies to:
 - [Telco Customer Churn – Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
 
+---
+---
+
+## 📌 Author
+
+**Anmol Kirtiwardhan**  
+🌐 Explore all my projects & live apps: [akwardhan.github.io](https://akwardhan.github.io)
