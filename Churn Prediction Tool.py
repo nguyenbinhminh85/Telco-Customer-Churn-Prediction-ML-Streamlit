@@ -3,8 +3,8 @@ import pandas as pd
 import joblib
 
 
-model = joblib.load(r"D:\Data Analysis\MySQL\Customer Churn\Telco-Customer-Churn-Prediction-ML-Streamlit\model.pkl")
-feature_names = joblib.load(r"D:\Data Analysis\MySQL\Customer Churn\Telco-Customer-Churn-Prediction-ML-Streamlit\feature_names.pkl")
+model = joblib.load(model.pkl)
+feature_names = joblib.load(feature_names.pkl)
 st.title("📉 Telco Customer Churn Prediction")
 st.write("Fill in the customer details below to predict if they are likely to churn.")
 
