@@ -3,8 +3,8 @@ import pandas as pd
 import joblib
 
 
-model = joblib.load(model.pkl)
-feature_names = joblib.load(feature_names.pkl)
+model = joblib.load("model.pkl")
+feature_names = joblib.load("feature_names.pkl")
 st.title("📉 Telco Customer Churn Prediction")
 st.write("Fill in the customer details below to predict if they are likely to churn.")
 
