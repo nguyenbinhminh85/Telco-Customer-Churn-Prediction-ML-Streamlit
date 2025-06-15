@@ -75,12 +75,11 @@ Built a responsive web application using Streamlit:
 
 🔗 **Try the live app here:** [Churn Predictor - Streamlit](https://telco-customer-churn-prediction-ml-app-yptkcbzrntq9szllbnvgcb.streamlit.app/)
 
-📸 _[Optional Screenshot Placeholder: `screenshots/streamlit_app_demo.png`]_
+📸 ![Live Model](https://github.com/Akwardhan/Telco-Customer-Churn-Prediction-ML-Streamlit/blob/main/Live%20Model.png?raw=true)  
+📸 ![Output](https://github.com/Akwardhan/Telco-Customer-Churn-Prediction-ML-Streamlit/blob/main/Output.png?raw=true)
 
 ---
 
-
----
 
 ## 🧠 Tools & Technologies
 
