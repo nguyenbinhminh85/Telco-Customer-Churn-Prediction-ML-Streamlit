@@ -1,8 +1,8 @@
 # Telco Customer Churn Prediction – Logistic Regression + Streamlit
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)
-[![Streamlit App](https://img.shields.io/badge/Live-App-green)](https://churn-prediction-akwardhan.streamlit.app)
-
+ [![Live App](https://img.shields.io/badge/Streamlit-Live--App-brightgreen?logo=streamlit&logoColor=white)](https://telco-customer-churn-prediction-ml-app-yptkcbzrntq9szllbnvgcb.streamlit.app/)
+ 
 Built an end-to-end churn prediction pipeline on Telco customer data using business-focused EDA, logistic regression modeling, and a Streamlit web application. Designed to help telecom operators reduce customer churn through early prediction and targeted intervention strategies.
 
 ---
@@ -70,6 +70,10 @@ Built a responsive web application using Streamlit:
 - Takes customer inputs (contract, tenure, charges, support, services)
 - Outputs churn prediction and probability
 - Helps business teams forecast churn risk before it happens
+
+## 🚀 Live Streamlit App
+
+🔗 **Try the live app here:** [Churn Predictor - Streamlit](https://telco-customer-churn-prediction-ml-app-yptkcbzrntq9szllbnvgcb.streamlit.app/)
 
 📸 _[Optional Screenshot Placeholder: `screenshots/streamlit_app_demo.png`]_
 
