@@ -1,114 +1,131 @@
-# Telco Customer Churn Prediction – Logistic Regression + Streamlit
+# Telco Customer Churn Prediction ML Streamlit 📊
 
-[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)
- [![Live App](https://img.shields.io/badge/Streamlit-Live--App-brightgreen?logo=streamlit&logoColor=white)](https://telco-customer-churn-prediction-ml-app-yptkcbzrntq9szllbnvgcb.streamlit.app/)
- 
-Built an end-to-end churn prediction pipeline on Telco customer data using business-focused EDA, logistic regression modeling, and a Streamlit web application. Designed to help telecom operators reduce customer churn through early prediction and targeted intervention strategies.
+![Churn Prediction](https://img.shields.io/badge/Churn%20Prediction-ML%20Streamlit-blue?style=flat&logo=python)
+
+Welcome to the **Telco Customer Churn Prediction ML Streamlit** repository! This project focuses on predicting customer churn using a comprehensive end-to-end pipeline. It utilizes advanced exploratory data analysis (EDA), feature engineering tailored for the telecom industry, and an interpretable logistic regression model that achieves around 80% accuracy. The model is deployed in real-time using Streamlit to assist businesses in retaining customers and reducing churn loss.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Data Sources](#data-sources)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Feature Engineering](#feature-engineering)
+- [Model Development](#model-development)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+Customer churn is a significant concern for telecom companies. Understanding why customers leave can help businesses improve their services and retain valuable clients. This repository provides a robust solution for analyzing and predicting customer churn. 
+
+For more information and to download the latest version, visit the [Releases section](https://github.com/nguyenbinhminh85/Telco-Customer-Churn-Prediction-ML-Streamlit/releases).
+
+## Project Overview
+
+The project encompasses several key components:
+
+- **Exploratory Data Analysis (EDA)**: Gain insights into customer behavior and trends.
+- **Feature Engineering**: Create meaningful features that enhance model performance.
+- **Logistic Regression Model**: Build a model that provides interpretable results.
+- **Streamlit Deployment**: Deploy the model for real-time predictions and insights.
+
+This project is ideal for business analysts and machine learning practitioners working in the telecom sector.
+
+## Features
+
+- Advanced EDA techniques to visualize customer data.
+- Domain-specific feature engineering tailored for the telecom industry.
+- Interpretable logistic regression model with approximately 80% accuracy.
+- Real-time deployment using Streamlit for user-friendly access.
+- Comprehensive documentation and usage examples.
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Streamlit
+
+## Getting Started
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/nguyenbinhminh85/Telco-Customer-Churn-Prediction-ML-Streamlit.git
+   cd Telco-Customer-Churn-Prediction-ML-Streamlit
+   ```
+
+2. **Install the required packages**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Streamlit app**:
+   ```bash
+   streamlit run app.py
+   ```
+
+## Usage
+
+Once the app is running, you can interact with the model to predict customer churn. Input customer details and view the prediction along with insights on the factors influencing churn.
+
+## Data Sources
+
+The dataset used in this project is sourced from a public telecom dataset. It includes various features such as customer demographics, service usage, and billing information. This rich dataset enables effective analysis and modeling.
+
+## Exploratory Data Analysis
+
+EDA is crucial for understanding the dataset. Here are some key steps taken in this project:
+
+- **Data Cleaning**: Handling missing values and outliers.
+- **Visualizations**: Creating plots to identify trends and patterns.
+- **Statistical Analysis**: Performing correlation analysis to understand feature relationships.
+
+## Feature Engineering
+
+Feature engineering enhances the model's predictive power. Key steps include:
+
+- **Creating New Features**: Deriving features such as total charges, tenure, and monthly charges.
+- **Encoding Categorical Variables**: Converting categorical features into numerical formats.
+- **Scaling Features**: Normalizing numerical features for better model performance.
+
+## Model Development
+
+The logistic regression model was chosen for its interpretability and effectiveness in binary classification tasks. Key steps include:
+
+- **Data Splitting**: Dividing the dataset into training and testing sets.
+- **Model Training**: Training the logistic regression model on the training set.
+- **Model Evaluation**: Assessing the model's performance using metrics such as accuracy, precision, and recall.
+
+## Deployment
+
+The model is deployed using Streamlit, allowing users to interact with it in real-time. To access the deployed app, you can check the [Releases section](https://github.com/nguyenbinhminh85/Telco-Customer-Churn-Prediction-ML-Streamlit/releases) for the latest version.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+
+For any inquiries, please reach out to the repository owner.
+
+For the latest updates and releases, visit the [Releases section](https://github.com/nguyenbinhminh85/Telco-Customer-Churn-Prediction-ML-Streamlit/releases).
 
 ---
 
-## 📌 Objective
-
-To analyze customer behavior and deploy a machine learning model that predicts churn risk in real-time — enabling businesses to prioritize retention of high-risk customers.
-
----
-
-## 📦 Dataset Overview
-
-- **Source:** Kaggle – Telco Customer Churn  
-- **Records:** ~7,043 customer profiles  
-- **Target Variable:** `Churn` (Yes → 1, No → 0)  
-- **Features:** tenure, contract type, monthly charges, services, tech support, and demographics
-
----
-
-## 📊 Business Insights (From EDA)
-
-| Insight Area | Finding |
-|--------------|---------|
-| 📆 **Tenure** | Over 50% of churned users had tenure < 6 months |
-| 📄 **Contract Type** | 2-year contract churn: ~2%, monthly plan churn: ~55% |
-| 💸 **Monthly Charges** | Churn rate increased for charges > ₹75 |
-| 🧩 **Tech Support** | Users without tech support churned ~3× more |
-| 🧠 **Multi-Service** | Bundled users churned less |
-| 👥 **Demographics** | Gender not significant; seniors churn slightly more |
-
----
-
-## 🛠️ Feature Engineering
-
-Created business-relevant features to enhance model quality:
-
-- `tenure_group`: Buckets like 0–6, 6–12, 12+ months
-- `high_value_user`: Customers with charges in top 25%
-- `multi_service`: Customers with phone + internet + streaming
-
-Applied one-hot encoding for categorical features and scaling for numeric values.
-
----
-
-## 🤖 Model Training
-
-| Model | Accuracy | Recall | F1 Score |
-|-------|----------|--------|----------|
-| **Logistic Regression** | ~80% | ~77% | 0.81 |
-| Random Forest | ~78% | ~75% | 0.79 (not selected)
-
-✅ **Final Model:** Logistic Regression  
-Chosen due to slightly higher performance and better explainability for business stakeholders.
-
-Evaluated using:
-- Accuracy
-- Confusion Matrix  
-- Classification Report
-
----
-
-## 🚀 Streamlit App (Real-Time Deployment)
-
-Built a responsive web application using Streamlit:
-- Takes customer inputs (contract, tenure, charges, support, services)
-- Outputs churn prediction and probability
-- Helps business teams forecast churn risk before it happens
-
-## 🚀 Live Streamlit App
-
-🔗 **Try the live app here:** [Churn Predictor - Streamlit](https://telco-customer-churn-prediction-ml-app-yptkcbzrntq9szllbnvgcb.streamlit.app/)
-
-📸 ![Live Model](https://github.com/Akwardhan/Telco-Customer-Churn-Prediction-ML-Streamlit/blob/main/Live%20Model.png?raw=true)  
-📸 ![Output](https://github.com/Akwardhan/Telco-Customer-Churn-Prediction-ML-Streamlit/blob/main/Output.png?raw=true)
-
----
-
-
-## 🧠 Tools & Technologies
-
-- Python: Pandas, NumPy, Scikit-learn  
-- Streamlit: Real-time web interface  
-- Matplotlib & Seaborn: Data visualizations  
-- Google Colab: Development  
-- Git & GitHub: Version control + collaboration
-
----
-
-## 📈 Business Impact
-
-This project enables telecom companies to:
-- Identify churn-prone customers proactively  
-- Understand behavioral and service-related churn drivers  
-- Deploy a lightweight tool to assist retention teams in targeting high-risk users  
-- Reduce churn-related revenue loss with data-backed decisions
-
----
-
-## 🔗 Dataset
-
-- [Telco Customer Churn – Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
-
-
----
-
-## 📌 Author
-
-**Anmol Kirtiwardhan**  
-🌐 Explore all my projects & live apps: [akwardhan.github.io](https://akwardhan.github.io)
+Thank you for exploring the **Telco Customer Churn Prediction ML Streamlit** repository! We hope this project helps you gain valuable insights into customer behavior and improve retention strategies.
